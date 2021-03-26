@@ -415,12 +415,7 @@ module.exports = function rust(options = {}) {
         },
 
         resolveFileUrl(info) {
-            if (info.referenceId === state.fileId) {
-                return options.importHook(options.serverPath + info.fileName);
-
-            } else {
-                return null;
-            }
+            return options.importHook(options.serverPath + info.fileName);
         },
     };
 };
